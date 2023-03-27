@@ -1,0 +1,27 @@
+.mobile {
+    display: none;
+}
+.categories {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+ul.ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-dark.ant-menu-inline-collapsed {
+    position: absolute;
+}
+ul.ant-menu.ant-menu-root.ant-menu-inline.ant-menu-dark {
+    position: absolute;
+}
+.ant-menu.ant-menu-inline-collapsed {
+    width: 0px !important;
+   
+}
+/* Start Small Devices */
+@media only screen and (max-width: 767px) {
+    .mobile {
+        display: block;
+    }
+    .laptop {
+        display: none;
+    }
+}
