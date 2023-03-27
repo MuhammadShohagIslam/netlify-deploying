@@ -1,22 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from "react";
-import _ from "lodash";
-import { toast } from "react-hot-toast";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import { addToWishList, getWishList, removeWishList } from "@/api/user";
-import { IProduct } from "../../../types/product.type";
-import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
 import CardZoomCarousel from "@/components/Card/CardZoomCarousel";
-import { useRouter } from "next/router";
-import { getProduct, productRating, relatedProducts } from "@/api/products";
-import ProductDetailsTab from "../../components/Product/ProductDetailsTab";
-import ProductInfo from "@/components/Product/ProductInfo/ProductInfo";
-import MainLayout from "@/layouts/MainLayout/MainLayout";
 import RatingModal from "@/components/Modal/RatingModal/RatingModal";
-import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Product from "@/components/Product/Product";
+import ProductInfo from "@/components/Product/ProductInfo/ProductInfo";
+import SectionTitle from "@/components/SectionTitle/SectionTitle";
+import MainLayout from "@/layouts/MainLayout/MainLayout";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
+import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
+import { getProduct, productRating, relatedProducts } from "@/pages/api/products";
+import { addToWishList, getWishList, removeWishList } from "@/pages/api/user";
+import _ from "lodash";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 import { CartType } from "types/cart.types";
-import HeadSeo  from "@/lib/seo/HeadSeo/HeadSeo";
+import { IProduct } from "../../../types/product.type";
+import ProductDetailsTab from "../../components/Product/ProductDetailsTab";
 
 type ProductDetailsParamsType = {
     params: {
@@ -205,9 +205,9 @@ const ProductDetails = ({
                         {/* Image gallery */}
                         <div className="z-10">
                             {product &&
-                            title &&
-                            product.images &&
-                            product.images.length ? (
+                                title &&
+                                product.images &&
+                                product.images.length ? (
                                 <CardZoomCarousel
                                     images={images}
                                     title={title}

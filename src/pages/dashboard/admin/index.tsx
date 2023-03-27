@@ -1,22 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
-import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
-import { AiOutlineUserAdd } from "react-icons/ai";
-import { SlHandbag } from "react-icons/sl";
-import { GiTakeMyMoney } from "react-icons/gi";
-import { MdOutlineProductionQuantityLimits } from "react-icons/md";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import DashWidget from "@/components/Dashboard/Admin/Dashboard/DashWidget/DashWidget";
-import { GetServerSideProps } from "next";
-import { getProductsBySort } from "@/api/products";
-import { allUsers, getOrders, productSummary } from "@/api/admin";
-import { IProduct } from "types/product.type";
+import LineChart from "@/components/Dashboard/Admin/Dashboard/LineChart/LineChart";
 import RecentOrder from "@/components/Dashboard/Admin/Dashboard/RecentOrder/RecentOrders";
 import RecentProduct from "@/components/Dashboard/Admin/Dashboard/RecentProduct/RecentProducts";
 import RecentUsers from "@/components/Dashboard/Admin/Dashboard/RecentUsers/RecentUsers";
-import LineChart from "@/components/Dashboard/Admin/Dashboard/LineChart/LineChart";
 import useCheckAdmin from "@/hooks/useCheckAdmin";
+import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { allUsers, getOrders, productSummary } from "@/pages/api/admin";
+import { getProductsBySort } from "@/pages/api/products";
+import { GetServerSideProps } from "next";
+import { useEffect, useState } from "react";
+import { AiOutlineUserAdd } from "react-icons/ai";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { MdOutlineProductionQuantityLimits } from "react-icons/md";
+import { SlHandbag } from "react-icons/sl";
+import { IProduct } from "types/product.type";
 
 type DashboardPropType = {
     products: IProduct[];

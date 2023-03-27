@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { getListOfBrands } from "@/api/brand";
-import { getListOfCategory, subCategoryOnCategory } from "@/api/category";
-import { getListOfColor } from "@/api/color";
-import { getProduct, updateProduct } from "@/api/products";
-import { getListOfSizes } from "@/api/size";
 import { IFormInput } from "@/components/Form/CreateProduct/FormInput.types";
 import UpdateProductForm from "@/components/Form/UpdateProduct/UpdateProduct";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { getListOfBrands } from "@/pages/api/brand";
+import { getListOfCategory, subCategoryOnCategory } from "@/pages/api/category";
+import { getListOfColor } from "@/pages/api/color";
+import { getProduct, updateProduct } from "@/pages/api/products";
+import { getListOfSizes } from "@/pages/api/size";
 import { GetServerSideProps } from "next";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";

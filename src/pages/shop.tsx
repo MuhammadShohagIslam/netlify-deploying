@@ -1,22 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
-import { getFilterRelatedProducts, getProductsByCount } from "@/api/products";
-import { getListOfCategory } from "@/api/category";
-import { getAllSubCategories } from "@/api/sub-categories";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import Star from "@/components/UI/Star/Star";
 import FilterMenu from "@/components/FilterMenu/FilterMenu";
+import FilterMobileMenu from "@/components/FilterMenu/FilterMobileMenu/FilterMobileMenu";
 import Product from "@/components/Product/Product";
+import Skeleton from "@/components/Skeleton/Skeleton";
 import SortingMenu from "@/components/SortingMenu/SortingMenu";
 import RangeSlider from "@/components/UI/RangeSlider/RangeSlider";
-import Skeleton from "@/components/Skeleton/Skeleton";
-import FilterMobileMenu from "@/components/FilterMenu/FilterMobileMenu/FilterMobileMenu";
+import Star from "@/components/UI/Star/Star";
 import MainLayout from "@/layouts/MainLayout/MainLayout";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
+import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
+import { getListOfCategory } from "@/pages/api/category";
+import { getFilterRelatedProducts, getProductsByCount } from "@/pages/api/products";
+import { getAllSubCategories } from "@/pages/api/sub-categories";
+import React, { useEffect, useState } from "react";
+import { ICategories } from "types/category.type";
 import { IProduct } from "types/product.type";
 import { ISubCategories } from "types/sub-category.type";
-import { ICategories } from "types/category.type";
-import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 
 const brandArray = ["Apple", "Life-Digital", "Samsung", "ASUS", "Lenovo", "HP"];
 const colorArray = ["Green", "Black", "Red", "White"];
@@ -504,11 +504,10 @@ const Shop = () => {
                                 <div className="sm:h-96 h-full">
                                     {loading ? (
                                         <div
-                                            className={`grid gap-5 ${
-                                                gridColumn
+                                            className={`grid gap-5 ${gridColumn
                                                     ? `grid-cols-2 md:grid-cols-1 sm:grid-cols-1`
                                                     : `grid-cols-1`
-                                            }`}
+                                                }`}
                                         >
                                             <Skeleton numbers={2} />
                                         </div>
@@ -518,11 +517,10 @@ const Shop = () => {
                                         </p>
                                     ) : (
                                         <div
-                                            className={`grid gap-5 ${
-                                                gridColumn
+                                            className={`grid gap-5 ${gridColumn
                                                     ? `grid-cols-2 md:grid-cols-1 sm:grid-cols-1`
                                                     : `grid-cols-1`
-                                            }`}
+                                                }`}
                                         >
                                             {products &&
                                                 products.length &&

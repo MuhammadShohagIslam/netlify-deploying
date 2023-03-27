@@ -1,13 +1,12 @@
-import { getSubCategory } from "@/api/sub-categories";
+import Product from "@/components/Product/Product";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Skeleton from "@/components/Skeleton/Skeleton";
-import React from "react";
-import { IProduct } from "types/product.type";
-import { useEffect, useState } from "react";
-import Product from "@/components/Product/Product";
-import { ISubCategories } from "types/sub-category.type";
 import MainLayout from "@/layouts/MainLayout/MainLayout";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { getSubCategory } from "@/pages/api/sub-categories";
+import { useEffect, useState } from "react";
+import { IProduct } from "types/product.type";
+import { ISubCategories } from "types/sub-category.type";
 
 type ProductBySubCategoryParamsType = {
     params: {
@@ -45,9 +44,8 @@ const ProductBySubCategory = ({
             <MainLayout>
                 <div className="container mt-10">
                     <SectionTitle
-                        title={`${
-                            productsData?.length > 1 ? "Products" : "Product"
-                        } By The Sub Category of "${subCategory.name}"`}
+                        title={`${productsData?.length > 1 ? "Products" : "Product"
+                            } By The Sub Category of "${subCategory.name}"`}
                     />
                     {loading ? (
                         <div className="grid mt-5 gap-5 grid-cols-3 md:grid-cols-2 sm:grid-cols-1">

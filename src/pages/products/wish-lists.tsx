@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { getWishLists, removeWishList } from "@/api/user";
-import _ from "lodash";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import toast from "react-hot-toast";
-import SectionTitle from "./../../components/SectionTitle/SectionTitle";
+import WishlistProduct from "@/components/Product/WishlistProduct/WishlistProduct";
 import Skeleton from "@/components/Skeleton/Skeleton";
+import MainLayout from "@/layouts/MainLayout/MainLayout";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
+import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import {
     StoreActionType,
-    UserType,
+    UserType
 } from "@/lib/states/storeReducer/storeReducer.type";
-import WishlistProduct from "@/components/Product/WishlistProduct/WishlistProduct";
-import MainLayout from "@/layouts/MainLayout/MainLayout";
+import { getWishLists, removeWishList } from "@/pages/api/user";
+import _ from "lodash";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { IProduct } from "types/product.type";
-import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import SectionTitle from "./../../components/SectionTitle/SectionTitle";
 
 const WishLists = () => {
     const [wishLists, setWishList] = useState([]);

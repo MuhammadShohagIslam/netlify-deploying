@@ -9,7 +9,7 @@ import {
     getUserCart,
     getUserShippingAddress,
     saveShippingAddress,
-} from "@/api/user";
+} from "@/pages/api/user";
 import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
 import toast from "react-hot-toast";
 import { useRouter } from "next/router";

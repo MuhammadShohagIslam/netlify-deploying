@@ -1,11 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { currentUser } from "@/api/auth";
 import ProfileEditModal from "@/components/Modal/ProfileEditModal/ProfileEditModal";
-import useCheckUser from "@/hooks/useCheckUser";
 import UserDashboard from "@/layouts/DashboardLayout/UserDashboard";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import { UserType } from "@/lib/states/storeReducer/storeReducer.type";
+import { currentUser } from "@/pages/api/auth";
 import { useEffect, useState } from "react";
 import { BiEdit } from "react-icons/bi";
 import { IProfile } from "../../../../types/profile.types";

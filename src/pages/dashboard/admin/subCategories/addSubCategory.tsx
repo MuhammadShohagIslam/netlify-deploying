@@ -1,15 +1,15 @@
-import { getListOfCategory } from "@/api/category";
-import { createSubCategory } from "@/api/sub-categories";
 import FormGroup from "@/components/Form/FormGroup";
+import ImageFileUploadForm from "@/components/Form/ImageFileUploadForm/ImageFileUploadForm";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import React, { useState, useEffect } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { getListOfCategory } from "@/pages/api/category";
+import { createSubCategory } from "@/pages/api/sub-categories";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { ICategories } from "types/category.type";
-import { useRouter } from "next/router";
-import ImageFileUploadForm from "@/components/Form/ImageFileUploadForm/ImageFileUploadForm";
-import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 
 interface IFormInputs {
     subCategory: string;

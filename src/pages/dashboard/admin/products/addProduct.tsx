@@ -1,13 +1,13 @@
-import { getListOfBrands } from "@/api/brand";
-import { getListOfCategory, subCategoryOnCategory } from "@/api/category";
-import { getListOfColor } from "@/api/color";
-import { createProduct } from "@/api/products";
-import { getListOfSizes } from "@/api/size";
 import CreateProductForm from "@/components/Form/CreateProduct/CreateProductForm";
 import { IFormInput } from "@/components/Form/CreateProduct/FormInput.types";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { getListOfBrands } from "@/pages/api/brand";
+import { getListOfCategory, subCategoryOnCategory } from "@/pages/api/category";
+import { getListOfColor } from "@/pages/api/color";
+import { createProduct } from "@/pages/api/products";
+import { getListOfSizes } from "@/pages/api/size";
 import { GetServerSideProps } from "next";
 import { useState } from "react";
 import { UseFormReset, UseFormSetValue } from "react-hook-form";

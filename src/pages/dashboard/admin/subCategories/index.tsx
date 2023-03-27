@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from "react";
-import {
-    getAllSubCategories,
-    deleteSubCategory,
-    updateSubCategory,
-    getSubCategory,
-} from "@/api/sub-categories";
 import SubCategoryTable from "@/components/Dashboard/Admin/SubCategoryTable/SubCategoryTable";
-import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
-import { ISubCategories } from "types/sub-category.type";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import { getListOfCategory } from "@/api/category";
-import toast from "react-hot-toast";
-import dynamic from "next/dynamic";
 import CustomModal from "@/components/Modal/CustomModal/CustomModal";
-import { ICategories } from "types/category.type";
+import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { getListOfCategory } from "@/pages/api/category";
+import {
+    deleteSubCategory, getAllSubCategories, getSubCategory, updateSubCategory
+} from "@/pages/api/sub-categories";
+import dynamic from "next/dynamic";
+import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
+import { ICategories } from "types/category.type";
+import { ISubCategories } from "types/sub-category.type";
 
 const AllSubCategory = () => {
     const [values, setValues] = useState({ images: [] });
