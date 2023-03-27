@@ -1,22 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, Fragment, useMemo } from "react";
+import TablePagination from "@/components/TablePagination/TablePagination";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
+import { deleteProduct } from "@/pages/api/products";
 import {
-    getPaginationRowModel,
-    useReactTable,
     ColumnDef,
     flexRender,
-    getCoreRowModel,
+    getCoreRowModel, getPaginationRowModel,
+    useReactTable
 } from "@tanstack/react-table";
-import TablePagination from "@/components/TablePagination/TablePagination";
-import { IProduct } from "types/product.type";
-import { SiProducthunt } from "react-icons/si";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { Fragment, useMemo } from "react";
+import toast from "react-hot-toast";
 import { AiOutlineEdit } from "react-icons/ai";
 import { MdDeleteOutline } from "react-icons/md";
-import { useRouter } from "next/router";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import toast from "react-hot-toast";
-import { deleteProduct } from "@/api/products";
+import { SiProducthunt } from "react-icons/si";
+import { IProduct } from "types/product.type";
 
 const ProductsTable = ({
     data,
@@ -115,15 +114,14 @@ const ProductsTable = ({
                         info.getValue().map((sc: any) => (
                             <span
                                 key={sc._id}
-                                className={`h-8 w-8 ${
-                                    sc.name === "Red"
+                                className={`h-8 w-8 ${sc.name === "Red"
                                         ? "bg-red-600"
                                         : sc.name === "Green"
-                                        ? `bg-success`
-                                        : sc.name === "Orange"
-                                        ? `bg-warning`
-                                        : `bg-${sc.name.toLowerCase()}-600`
-                                } border border-black border-opacity-10 rounded-full`}
+                                            ? `bg-success`
+                                            : sc.name === "Orange"
+                                                ? `bg-warning`
+                                                : `bg-${sc.name.toLowerCase()}-600`
+                                    } border border-black border-opacity-10 rounded-full`}
                             ></span>
                         ))}
                 </span>

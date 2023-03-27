@@ -1,11 +1,11 @@
-import React from "react";
-import Resizer from "react-image-file-resizer";
-import { toast } from "react-hot-toast";
-import Image from "next/image";
-import { AiOutlineUser } from "react-icons/ai";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import { uploadingImageFile } from "@/api/cloudinary";
-import { createOrUpdateUser } from "@/api/auth";
+import { createOrUpdateUser } from "@/pages/api/auth";
+import { uploadingImageFile } from "@/pages/api/cloudinary";
+import Image from "next/image";
+import React from "react";
+import { toast } from "react-hot-toast";
+import { AiOutlineUser } from "react-icons/ai";
+import Resizer from "react-image-file-resizer";
 import { FileUploadPropsType } from "./FileUpload.types";
 
 const FileUpload = ({

@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import { AiOutlineDollar, AiOutlineCheck } from "react-icons/ai";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import { createPaymentIntent } from "@/api/stripe";
 import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import { createOrder } from "@/api/user";
-import Link from "next/link";
-import Image from "next/image";
-import classes from "./StripeCheckout.module.css";
+import { createPaymentIntent } from "@/pages/api/stripe";
+import { createOrder } from "@/pages/api/user";
+import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { StripeCardElementChangeEvent } from "@stripe/stripe-js";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { AiOutlineCheck, AiOutlineDollar } from "react-icons/ai";
 import { IProduct } from "types/product.type";
+import classes from "./StripeCheckout.module.css";
 
 type ProductType = {
     product: IProduct;
@@ -96,7 +96,7 @@ const StripeCheckout = () => {
                     paymentBy: "Stripe",
                 };
                 createOrder(paymentInfoObject, user!.token)
-                    .then((res) => {})
+                    .then((res) => { })
                     .catch((error) => {
                         console.log(error);
                     });
@@ -141,8 +141,8 @@ const StripeCheckout = () => {
             <div className="w-full bg-white border border-gray-200 rounded-lg shadow my-5">
                 <div className="flex flex-col items-center pb-10 rounded-full">
                     {product &&
-                    product.product.images &&
-                    product.product?.images[0] ? (
+                        product.product.images &&
+                        product.product?.images[0] ? (
                         <Image
                             height={200}
                             width={400}

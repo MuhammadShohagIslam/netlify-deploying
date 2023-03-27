@@ -1,16 +1,16 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { toast } from "react-hot-toast";
-import { updatePassword } from "firebase/auth";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import FormGroup from "@/components/Form/FormGroup";
 import CheckInput from "@/components/Form/CheckInput";
-import Link from "next/link";
-import { createOrUpdateUser } from "@/api/auth";
-import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import { useRouter } from "next/router";
+import FormGroup from "@/components/Form/FormGroup";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
+import { createOrUpdateUser } from "@/pages/api/auth";
+import axios from "axios";
+import { updatePassword } from "firebase/auth";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
 
 type FormValues = {
     email: string;
@@ -115,7 +115,7 @@ const CompleteRegister = () => {
             photoURL,
         };
         userProfileUpdate(profile)
-            .then((result) => {})
+            .then((result) => { })
             .catch((error) => {
                 toast.error(error.message);
             });

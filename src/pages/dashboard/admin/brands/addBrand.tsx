@@ -1,12 +1,12 @@
 import FormGroup from "@/components/Form/FormGroup";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import React, { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import toast from "react-hot-toast";
-import { useRouter } from "next/router";
-import { createBrand } from "@/api/brand";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { createBrand } from "@/pages/api/brand";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 interface IFormInputs {
     brand: string;

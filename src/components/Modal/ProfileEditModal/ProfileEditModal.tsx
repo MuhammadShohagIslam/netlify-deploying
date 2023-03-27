@@ -1,10 +1,10 @@
-import { createOrUpdateUser } from "@/api/auth";
 import FormGroup from "@/components/Form/FormGroup";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import {
     StoreActionType,
-    UserType,
+    UserType
 } from "@/lib/states/storeReducer/storeReducer.type";
+import { createOrUpdateUser } from "@/pages/api/auth";
 import { SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { IProfile } from "types/profile.types";
@@ -110,11 +110,11 @@ const ProfileEditModal = (props: ProfileEditModalPropType) => {
             photoURL: photoImage,
         };
         userProfileUpdate(profile)
-            .then((result) => {})
+            .then((result) => { })
             .catch((error) => {
                 toast.error(error);
             })
-            .finally(() => {});
+            .finally(() => { });
     };
 
     return (

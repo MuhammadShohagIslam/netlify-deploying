@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
+import Product from "@/components/Product/Product";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Skeleton from "@/components/Skeleton/Skeleton";
-import React from "react";
-import { IProduct } from "types/product.type";
-import Product from "@/components/Product/Product";
 import MainLayout from "@/layouts/MainLayout/MainLayout";
-import { ICategories } from "types/category.type";
-import { getSingleCategory } from "@/api/category";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { getSingleCategory } from "@/pages/api/category";
+import { useEffect, useState } from "react";
+import { ICategories } from "types/category.type";
+import { IProduct } from "types/product.type";
 
 type ProductByCategoryParamsType = {
     params: {
@@ -44,9 +43,8 @@ const ProductByCategory = ({
             <MainLayout>
                 <div className="container mt-12">
                     <SectionTitle
-                        title={`${
-                            productsData?.length > 1 ? "Products" : "Product"
-                        } By The Category of "${category?.name}"`}
+                        title={`${productsData?.length > 1 ? "Products" : "Product"
+                            } By The Category of "${category?.name}"`}
                     />
                     {loading ? (
                         <div className="grid mt-5 gap-5 grid-cols-3 md:grid-cols-2 sm:grid-cols-1">

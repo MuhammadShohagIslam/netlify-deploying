@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { allUsers } from "@/api/admin";
 import CustomerTable from "@/components/Dashboard/Admin/CustomerTable/CustomerTable";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { allUsers } from "@/pages/api/admin";
 import { useEffect, useState } from "react";
 
 const Customers = () => {

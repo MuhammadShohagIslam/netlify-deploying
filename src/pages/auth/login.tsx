@@ -1,16 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { FaGoogle } from "react-icons/fa";
-import { toast } from "react-hot-toast";
-import { GoogleAuthProvider } from "firebase/auth";
-import Swal from "sweetalert2";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import { createOrUpdateUser } from "@/api/auth";
-import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import { useRouter } from "next/router";
 import FormGroup from "@/components/Form/FormGroup";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
+import { createOrUpdateUser } from "@/pages/api/auth";
+import { GoogleAuthProvider } from "firebase/auth";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+import { FaGoogle } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 type FormValues = {
     email: string;

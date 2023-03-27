@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import dynamic from "next/dynamic";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import Link from "next/link";
 import CartTable from "@/components/Carts/CartTable/CartTable";
-import { saveOrder } from "@/api/user";
-import { useRouter } from "next/router";
-import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
 import MainLayout from "@/layouts/MainLayout/MainLayout";
-import { CartType } from "types/cart.types";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
+import { saveOrder } from "@/pages/api/user";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { CartType } from "types/cart.types";
 
 const Cart = () => {
     const { state, dispatch } = useStoreContext();
@@ -176,9 +176,8 @@ const Cart = () => {
                                             key={product._id}
                                         >
                                             {product.title} x {product.count} ={" "}
-                                            {`$${
-                                                product.price * product.count
-                                            }`}
+                                            {`$${product.price * product.count
+                                                }`}
                                         </p>
                                     ))}
                                 <hr className="mt-2" />

@@ -1,14 +1,12 @@
-import {
-    getListOfCategory,
-    deleteCategory,
-    getSingleCategory,
-    updateCategory,
-} from "@/api/category";
 import CategoryTable from "@/components/Dashboard/Admin/CategoryTable/CategoryTable";
 import CustomModal from "@/components/Modal/CustomModal/CustomModal";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import {
+    deleteCategory, getListOfCategory, getSingleCategory,
+    updateCategory
+} from "@/pages/api/category";
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";

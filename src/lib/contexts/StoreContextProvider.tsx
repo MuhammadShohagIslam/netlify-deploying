@@ -1,33 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { currentUser } from "@/pages/api/auth";
+import {
+    getAuth, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, sendSignInLinkToEmail, signInWithEmailAndPassword, signInWithEmailLink, signInWithPopup,
+    signOut, updatePassword, updateProfile, User
+} from "firebase/auth";
 import React, {
     createContext,
     useContext,
-    useEffect,
-    useState,
-    useReducer,
+    useEffect, useReducer, useState
 } from "react";
-import {
-    sendSignInLinkToEmail,
-    signInWithEmailLink,
-    getAuth,
-    onAuthStateChanged,
-    signInWithEmailAndPassword,
-    signInWithPopup,
-    signOut,
-    updateProfile,
-    sendPasswordResetEmail,
-    updatePassword,
-    User,
-    GoogleAuthProvider,
-} from "firebase/auth";
-import { ActionConfigType, StoreContextType } from "./StoreContext.type";
-import {
-    storeReducer,
-    initialState,
-} from "../states/storeReducer/storeReducer";
 import firebaseApp from "../config/firebase/firebase.config";
+import {
+    initialState, storeReducer
+} from "../states/storeReducer/storeReducer";
 import { StoreActionType } from "../states/storeReducer/storeReducer.type";
-import { currentUser } from "@/api/auth";
+import { ActionConfigType, StoreContextType } from "./StoreContext.type";
 
 const StoreContext = createContext<StoreContextType | null>(null);
 const auth = getAuth(firebaseApp);
