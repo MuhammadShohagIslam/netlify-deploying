@@ -1,7 +1,7 @@
+import { createPaymentIntent } from "@/api/stripe";
+import { createOrder } from "@/api/user";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import { createPaymentIntent } from "@/pages/api/stripe";
-import { createOrder } from "@/pages/api/user";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { StripeCardElementChangeEvent } from "@stripe/stripe-js";
 import Image from "next/image";

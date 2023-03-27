@@ -1,4 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { getListOfCategory } from "@/api/category";
+import { getFilterRelatedProducts, getProductsByCount } from "@/api/products";
+import { getAllSubCategories } from "@/api/sub-categories";
 import FilterMenu from "@/components/FilterMenu/FilterMenu";
 import FilterMobileMenu from "@/components/FilterMenu/FilterMobileMenu/FilterMobileMenu";
 import Product from "@/components/Product/Product";
@@ -10,9 +13,6 @@ import MainLayout from "@/layouts/MainLayout/MainLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import { getListOfCategory } from "@/pages/api/category";
-import { getFilterRelatedProducts, getProductsByCount } from "@/pages/api/products";
-import { getAllSubCategories } from "@/pages/api/sub-categories";
 import React, { useEffect, useState } from "react";
 import { ICategories } from "types/category.type";
 import { IProduct } from "types/product.type";
@@ -505,8 +505,8 @@ const Shop = () => {
                                     {loading ? (
                                         <div
                                             className={`grid gap-5 ${gridColumn
-                                                    ? `grid-cols-2 md:grid-cols-1 sm:grid-cols-1`
-                                                    : `grid-cols-1`
+                                                ? `grid-cols-2 md:grid-cols-1 sm:grid-cols-1`
+                                                : `grid-cols-1`
                                                 }`}
                                         >
                                             <Skeleton numbers={2} />
@@ -518,8 +518,8 @@ const Shop = () => {
                                     ) : (
                                         <div
                                             className={`grid gap-5 ${gridColumn
-                                                    ? `grid-cols-2 md:grid-cols-1 sm:grid-cols-1`
-                                                    : `grid-cols-1`
+                                                ? `grid-cols-2 md:grid-cols-1 sm:grid-cols-1`
+                                                : `grid-cols-1`
                                                 }`}
                                         >
                                             {products &&

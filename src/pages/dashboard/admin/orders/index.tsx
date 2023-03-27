@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { getOrders, updateOrderStatus } from "@/api/admin";
 import OrdersTable from "@/components/Dashboard/Admin/OrdersTable/OrdersTable";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { getOrders, updateOrderStatus } from "@/pages/api/admin";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 

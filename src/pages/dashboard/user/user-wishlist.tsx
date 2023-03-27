@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { getWishLists, removeWishList } from "@/api/user";
 import WishlistProduct from "@/components/Product/WishlistProduct/WishlistProduct";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Skeleton from "@/components/Skeleton/Skeleton";
 import UserDashboard from "@/layouts/DashboardLayout/UserDashboard";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { getWishLists, removeWishList } from "@/pages/api/user";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { IProduct } from "types/product.type";

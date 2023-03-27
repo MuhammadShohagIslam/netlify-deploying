@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { deleteProduct } from "@/api/products";
 import TablePagination from "@/components/TablePagination/TablePagination";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import { deleteProduct } from "@/pages/api/products";
 import {
     ColumnDef,
     flexRender,
@@ -115,12 +115,12 @@ const ProductsTable = ({
                             <span
                                 key={sc._id}
                                 className={`h-8 w-8 ${sc.name === "Red"
-                                        ? "bg-red-600"
-                                        : sc.name === "Green"
-                                            ? `bg-success`
-                                            : sc.name === "Orange"
-                                                ? `bg-warning`
-                                                : `bg-${sc.name.toLowerCase()}-600`
+                                    ? "bg-red-600"
+                                    : sc.name === "Green"
+                                        ? `bg-success`
+                                        : sc.name === "Orange"
+                                            ? `bg-warning`
+                                            : `bg-${sc.name.toLowerCase()}-600`
                                     } border border-black border-opacity-10 rounded-full`}
                             ></span>
                         ))}

@@ -1,3 +1,4 @@
+import { getWishLists, removeWishList } from "@/api/user";
 import WishlistProduct from "@/components/Product/WishlistProduct/WishlistProduct";
 import Skeleton from "@/components/Skeleton/Skeleton";
 import MainLayout from "@/layouts/MainLayout/MainLayout";
@@ -7,7 +8,6 @@ import {
     StoreActionType,
     UserType
 } from "@/lib/states/storeReducer/storeReducer.type";
-import { getWishLists, removeWishList } from "@/pages/api/user";
 import _ from "lodash";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";

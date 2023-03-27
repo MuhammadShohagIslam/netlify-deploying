@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { currentUser } from "@/pages/api/auth";
+import { currentUser } from "@/api/auth";
 import {
     getAuth, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, sendSignInLinkToEmail, signInWithEmailAndPassword, signInWithEmailLink, signInWithPopup,
     signOut, updatePassword, updateProfile, User

@@ -1,9 +1,9 @@
+import { creatingCoupon, getListOfCoupons, removingCoupon } from "@/api/coupon";
 import CouponForm from "@/components/Form/CouponForm/CouponForm";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import { UserType } from "@/lib/states/storeReducer/storeReducer.type";
-import { creatingCoupon, getListOfCoupons, removingCoupon } from "@/pages/api/coupon";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { AiOutlineClear } from "react-icons/ai";

@@ -1,4 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { getProduct, productRating, relatedProducts } from "@/api/products";
+import { addToWishList, getWishList, removeWishList } from "@/api/user";
 import CardZoomCarousel from "@/components/Card/CardZoomCarousel";
 import RatingModal from "@/components/Modal/RatingModal/RatingModal";
 import Product from "@/components/Product/Product";
@@ -8,8 +10,6 @@ import MainLayout from "@/layouts/MainLayout/MainLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import { getProduct, productRating, relatedProducts } from "@/pages/api/products";
-import { addToWishList, getWishList, removeWishList } from "@/pages/api/user";
 import _ from "lodash";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";

@@ -1,4 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { allUsers, getOrders, productSummary } from "@/api/admin";
+import { getProductsBySort } from "@/api/products";
 import DashWidget from "@/components/Dashboard/Admin/Dashboard/DashWidget/DashWidget";
 import LineChart from "@/components/Dashboard/Admin/Dashboard/LineChart/LineChart";
 import RecentOrder from "@/components/Dashboard/Admin/Dashboard/RecentOrder/RecentOrders";
@@ -8,8 +10,6 @@ import useCheckAdmin from "@/hooks/useCheckAdmin";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { allUsers, getOrders, productSummary } from "@/pages/api/admin";
-import { getProductsBySort } from "@/pages/api/products";
 import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
 import { AiOutlineUserAdd } from "react-icons/ai";

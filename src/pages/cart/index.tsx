@@ -1,9 +1,9 @@
+import { saveOrder } from "@/api/user";
 import CartTable from "@/components/Carts/CartTable/CartTable";
 import MainLayout from "@/layouts/MainLayout/MainLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import { saveOrder } from "@/pages/api/user";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/router";

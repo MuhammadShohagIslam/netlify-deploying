@@ -1,8 +1,8 @@
+import { createBrand } from "@/api/brand";
 import FormGroup from "@/components/Form/FormGroup";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { createBrand } from "@/pages/api/brand";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";

@@ -1,3 +1,7 @@
+import { getListOfBlogs } from "@/api/blog";
+import { getListOfCategory } from "@/api/category";
+import { getProductsBySort } from "@/api/products";
+import { getAllSubCategories } from "@/api/sub-categories";
 import Banner from "@/components/Home/Banner/Banner";
 import BestSellers from "@/components/Home/BestSellers/BestSellers";
 import Blogs from "@/components/Home/Blogs/Blogs";
@@ -9,10 +13,6 @@ import SubCategories from "@/components/Home/SubCategories/SubCategories";
 import Preloader from '@/components/UI/Preloader/Preloader';
 import MainLayout from "@/layouts/MainLayout/MainLayout";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { getListOfBlogs } from "@/pages/api/blog";
-import { getListOfCategory } from "@/pages/api/category";
-import { getProductsBySort } from "@/pages/api/products";
-import { getAllSubCategories } from "@/pages/api/sub-categories";
 import AOS from "aos";
 import { GetServerSideProps } from "next";
 import { useEffect, useState } from 'react';

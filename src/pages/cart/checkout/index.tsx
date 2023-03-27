@@ -1,22 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import {
     createOrderCashOnDelivery,
     emptyCart,
     getTotalPriceAfterDiscount,
     getUserCart,
     getUserShippingAddress,
-    saveShippingAddress,
-} from "@/pages/api/user";
-import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import toast from "react-hot-toast";
-import { useRouter } from "next/router";
+    saveShippingAddress
+} from "@/api/user";
 import ShippingAddressForm from "@/components/Form/ShippingAddressForm";
-import MainLayout from "@/layouts/MainLayout/MainLayout";
 import useCheckUser from "@/hooks/useCheckUser";
+import MainLayout from "@/layouts/MainLayout/MainLayout";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
+import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 type AddressType = {
     fullName?: string;
@@ -55,8 +55,8 @@ const Checkout = () => {
     const { state, dispatch } = useStoreContext();
     const { carts, user, isCashOnDelivery, isCouponed } = state;
     const router = useRouter();
-    if(user){
-        
+    if (user) {
+
     }
 
     useEffect(() => {
@@ -382,9 +382,8 @@ const Checkout = () => {
                                             key={product._id}
                                         >
                                             {product.title} x {product.count} ={" "}
-                                            {`$${
-                                                product.price * product.count
-                                            }`}
+                                            {`$${product.price * product.count
+                                                }`}
                                         </p>
                                     ))}
                                 <hr className="mt-2" />

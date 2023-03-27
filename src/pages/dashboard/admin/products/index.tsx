@@ -1,7 +1,7 @@
+import { getProductsBySort } from "@/api/products";
 import ProductsTable from "@/components/Dashboard/Admin/ProductsTable/ProductsTable";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { getProductsBySort } from "@/pages/api/products";
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import { IProduct } from "types/product.type";

@@ -1,14 +1,14 @@
-import CustomModal from "@/components/Modal/CustomModal/CustomModal";
-import CustomTable from "@/components/Table/CustomTable/CustomTable";
-import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import {
     deleteColor,
     getListOfColor,
     getSingleColor,
     updateColor
-} from "@/pages/api/color";
+} from "@/api/color";
+import CustomModal from "@/components/Modal/CustomModal/CustomModal";
+import CustomTable from "@/components/Table/CustomTable/CustomTable";
+import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
+import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";

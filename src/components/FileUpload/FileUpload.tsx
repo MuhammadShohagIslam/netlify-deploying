@@ -1,6 +1,6 @@
+import { createOrUpdateUser } from "@/api/auth";
+import { uploadingImageFile } from "@/api/cloudinary";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import { createOrUpdateUser } from "@/pages/api/auth";
-import { uploadingImageFile } from "@/pages/api/cloudinary";
 import Image from "next/image";
 import React from "react";
 import { toast } from "react-hot-toast";

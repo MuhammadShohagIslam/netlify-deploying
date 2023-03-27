@@ -1,3 +1,4 @@
+import { getOrdersByUser } from "@/api/user";
 import OrderCartInTable from "@/components/Order/OrderCartInTable";
 import OrderInvoiceDownload from "@/components/Order/OrderInvoiceDownload";
 import OrderPaymentInfo from "@/components/Order/OrderPaymentInfo";
@@ -5,7 +6,6 @@ import UserDashboard from "@/layouts/DashboardLayout/UserDashboard";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import { UserType } from "@/lib/states/storeReducer/storeReducer.type";
-import { getOrdersByUser } from "@/pages/api/user";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import { useEffect, useState } from "react";
 import { IOrder } from "types/order.types";

@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { createOrUpdateUser } from "@/api/auth";
 import FormGroup from "@/components/Form/FormGroup";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
 import { StoreActionType } from "@/lib/states/storeReducer/storeReducer.type";
-import { createOrUpdateUser } from "@/pages/api/auth";
 import { GoogleAuthProvider } from "firebase/auth";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";

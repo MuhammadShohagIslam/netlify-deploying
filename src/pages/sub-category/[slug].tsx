@@ -1,9 +1,9 @@
+import { getSubCategory } from "@/api/sub-categories";
 import Product from "@/components/Product/Product";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Skeleton from "@/components/Skeleton/Skeleton";
 import MainLayout from "@/layouts/MainLayout/MainLayout";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { getSubCategory } from "@/pages/api/sub-categories";
 import { useEffect, useState } from "react";
 import { IProduct } from "types/product.type";
 import { ISubCategories } from "types/sub-category.type";

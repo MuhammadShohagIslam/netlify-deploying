@@ -1,8 +1,8 @@
+import { createSize } from "@/api/size";
 import FormGroup from "@/components/Form/FormGroup";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { createSize } from "@/pages/api/size";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";

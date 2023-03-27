@@ -1,8 +1,8 @@
-import Resizer from "react-image-file-resizer";
+import { deletingImageFile, uploadingImageFile } from "@/api/cloudinary";
+import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import React, { Fragment } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
-import { deletingImageFile, uploadingImageFile } from "@/pages/api/cloudinary";
+import Resizer from "react-image-file-resizer";
 
 
 type ImageFileUploadFormPropType = {

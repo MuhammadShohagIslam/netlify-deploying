@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { currentUser } from "@/api/auth";
 import FileUpload from "@/components/FileUpload/FileUpload";
 import FormGroup from "@/components/Form/FormGroup";
 import ProfileEditModal from "@/components/Modal/ProfileEditModal/ProfileEditModal";
@@ -6,7 +7,6 @@ import useCheckUser from "@/hooks/useCheckUser";
 import UserDashboard from "@/layouts/DashboardLayout/UserDashboard";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { currentUser } from "@/pages/api/auth";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";

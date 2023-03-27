@@ -1,9 +1,9 @@
+import { getSingleCategory } from "@/api/category";
 import Product from "@/components/Product/Product";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import Skeleton from "@/components/Skeleton/Skeleton";
 import MainLayout from "@/layouts/MainLayout/MainLayout";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { getSingleCategory } from "@/pages/api/category";
 import { useEffect, useState } from "react";
 import { ICategories } from "types/category.type";
 import { IProduct } from "types/product.type";

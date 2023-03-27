@@ -1,9 +1,9 @@
+import { createCategory } from "@/api/category";
 import FormGroup from "@/components/Form/FormGroup";
 import ImageFileUploadForm from "@/components/Form/ImageFileUploadForm/ImageFileUploadForm";
 import DashboardLayout from "@/layouts/DashboardLayout/DashboardLayout";
 import { useStoreContext } from "@/lib/contexts/StoreContextProvider";
 import HeadSeo from "@/lib/seo/HeadSeo/HeadSeo";
-import { createCategory } from "@/pages/api/category";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
